@@ -3,4 +3,4 @@
 - Update version number in `src/color-thief.js` and `package.json`
 - Run `grunt build`
 - Push to Github repo
-- Create a new Github release along with tag. Naming convention for both ```v2.8.1```
+- Create a new Github release along with tanpg. Naming convention for both ```v2.8.1```

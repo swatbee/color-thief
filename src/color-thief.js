@@ -134,8 +134,7 @@ ColorThief.prototype.getPalette = function(sourceImage, colorCount, quality) {
 
     // Clean up
     image.removeCanvas();
-
-    return palette;
+    return {palette:palette, pixels:pixelArray};
 };
 
 ColorThief.prototype.getColorFromUrl = function(imageUrl, callback, quality) {
@@ -466,6 +465,7 @@ var MMCQ = (function() {
             bmin=1000000, bmax=0,
             rval, gval, bval;
         // find min/max
+      debugger;
         pixels.forEach(function(pixel) {
             rval = pixel[0] >> rshift;
             gval = pixel[1] >> rshift;
@@ -578,7 +578,7 @@ var MMCQ = (function() {
         }
 
         // XXX: check color content and convert to grayscale if insufficient
-
+        debugger;
         var histo = getHisto(pixels),
             histosize = 1 << (3 * sigbits);
 
@@ -600,6 +600,7 @@ var MMCQ = (function() {
                 niters = 0,
                 vbox;
             while (niters < maxIterations) {
+                debugger;
                 vbox = lh.pop();
                 if (!vbox.count())  { /* just put it back */
                     lh.push(vbox);

@@ -42,7 +42,7 @@ $(document).ready(function () {
 
     var colorThiefOutput = {
       color: color,
-      palette: palette,
+      palette: palette.palette,
       elapsedTimeForGetColor: elapsedTimeForGetColor,
       elapsedTimeForGetPalette: elapsedTimeForGetPalette
     };
